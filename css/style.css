@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+/*
+color pallete: https://coolors.co/2b2d42-8d99ae-edf2f4-ef233c-d90429
+*/
+
+:root {
+    --color-primary: ;
+    --color-white: #fff;
+    --color-black: #000;
+    --color-bg: #F8F9FA;
+    --color-bg1: #8D99AE;
+    --color-bg2: #2B2D42;
+
+    --container-width-lg: 66%;
+    --container-width-md: 90%;
+    --container-width-sm: 95%;
+
+    --transition: all 400ms ease;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    line-height: 1.7;
+    color: var(--color-black);
+    background: var(--color-bg);
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+section {
+    flex: 1;
+}
+
+.container {
+    width: var(--container-width-lg);
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5 {
+    line-height: 1.2;
+    font-family: "Nanum Myeongjo", serif;
+}
+
+h1 {
+    font-size: 2.4rem;
+}
+
+h2 {
+    font-size: 2.0rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+a {
+    color: var(--color-black);
+}
+
+.logo{
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+.btn {
+    background: var(--color-bg2);
+    color: var(--color-bg);    
+}
+
+
+/* ==================== NAVBAR ==================== */
+nav {
+    background: transparent;
+    width: 100vw;
+    height: 4rem;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+.window-scroll {
+    background: var(--color-white);
+    transition: var(--transition);
+}
+
+.nav__container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__menu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-size: small;
+}
+
+.nav__menu .home:hover {
+    color: var(--color-bg1);
+    font-weight: 700;
+    transition: var(--transition);
+}
+
+.btn__container .btn {
+    width: 8rem;
+    height: 2.4rem;
+    margin-left: 0.4rem;
+    border: solid 1px var(--color-bg2);
+}
+
+#login-btn {
+    background: var(--color-bg2);
+    color: var(--color-white);
+}
+
+#signup-btn {
+    background: transparent;
+    color: var(--color-bg2);
+}
+
+#login-btn:hover {
+    background: red;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+#signup-btn:hover {
+    border: solid 1px red;
+    color: red;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+
+/* ==================== HEADER ==================== */
+header {
+    position: relative;
+    padding: 2rem 0 3rem;    
+}
+
+.header__container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header__container h1 {
+    margin-bottom: 1.2rem;
+}
+
+/* ==================== BLOGS ==================== */
+.blogs__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 4rem;
+}
+
+.blog {
+    background: transparent;
+    border: 1px solid var(--color-bg1);
+}
+
+.blog:hover {
+    background: var(--color-white);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.blog__container {
+    margin: 1rem;
+}
+
+.blog__container h5 {
+    margin: 0 0 0.5rem;
+}
+
+.blog__container p {
+    line-height: 1rem;
+    font-size: 0.9rem;
+    color: var(--color-bg2);
+}
+
+.blog img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+}
+
+
+/* ==================== BLOGS ==================== */
+footer {
+    background: var(--color-bg2);
+    color: var(--color-bg);
+    margin-top: 5rem;
+}
+
+footer a {
+    color: var(--color-white);
+}
+
+.ftr__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.4rem 0 4.4rem;
+    font-size: 0.8rem;
+}
+
+.ftr__menu {
+    display: flex;
+    gap: 4rem;
+    padding-top: 1rem;
+}
+
+
+
+
+/* ==================== MEDIA QUERIES (TABLET) ==================== */
+
+@media screen and (max-width: 1024px) {
+    .container {
+        width: var(--container-width-md);
+        margin: 0 auto;
+    }
+    
+    .blogs__container {
+        gap: 2rem;
+    }
+}

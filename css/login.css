@@ -1,0 +1,119 @@
+:root {
+    --color-primary: ;
+    --color-white: #fff;
+    --color-black: #000;
+    --color-bg: #F8F9FA;
+    --color-bg1: #8D99AE;
+    --color-bg2: #2B2D42;
+    --color-focus: rgba(245, 245, 245, 0.856);
+
+    --container-width-lg: 66%;
+    --container-width-md: 90%;
+    --container-width-sm: 95%;
+
+    --transition: all 400ms ease;
+}
+
+/* ==================== HEADER ==================== */
+header {
+    padding: 0;
+}
+
+.login__header, .signup__header {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3vh;
+}
+
+.login__header h2, .signup__header h2 {
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+
+/* ==================== CREDENTIAL DEFAULT ==================== */
+.credential {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 28rem;
+    overflow: hidden;
+}
+
+.credential a {
+    font-weight: 700;
+    text-decoration: underline;
+    padding: 0 2px 0 2px;
+    color: var(--color-bg2);
+}
+
+.credential a:hover {
+    color: var(--color-bg1);
+}
+
+.signup__container, .login__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 28rem;
+    transition: var(--transition);
+    gap: 1rem;
+}
+
+.login__container{
+    position: absolute;
+    left: 0;
+}
+
+.signup__container {
+    position: absolute;
+    left: 30rem;
+}
+
+.input__field {
+    height: 2.4rem;
+    width: 100%;
+    border: solid 1px var(--color-bg2);
+    padding: 0 10px 0 2rem;
+    letter-spacing: 0.4px;
+}
+
+.input__field:hover, .input__field:focus {
+    background: var(--color-focus);
+}
+
+.input__container i {
+    position: relative;
+    top: -2rem;
+    left: 0.6rem;
+    color: var(--color-bg2);
+}
+
+.submit {
+    background: var(--color-bg2);
+    color: var(--color-white);
+    font-family: "Lato", serif;
+    font-size: 1rem;
+    width: 100%;
+    padding: 0.8rem 2rem;
+}
+
+.submit:hover {
+    cursor: pointer;
+    background: var(--color-bg1);
+    transition: var(--transition);
+    font-weight: 700;
+}
+
+
+/* ==================== LOGIN ==================== */
+.login__container .input__container {
+    width: 28rem;
+}
+
+/* ==================== SIGN UP ==================== */
+.name {
+    display: flex;
+    gap: 1rem;
+}
